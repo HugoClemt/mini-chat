@@ -2,11 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 button {
-    @apply rounded p-2 bg-sky-100; 
+  @apply rounded p-2 bg-sky-100;
 }
 
 input, textarea, select {
-    @apply rounded p-2 border border-slate-200;
-}
+  @apply rounded p-2 border border-slate-200;
+}/*# sourceMappingURL=styles.css.map */
