@@ -1,0 +1,20 @@
+@if (loggedIn) { 
+    <send-message (send)="send($event)"/>
+  } @else {
+    <div class="bg-slate-200 p-4 flex gap-2 items-center">
+      <input type="text" [(ngModel)]="username"/>
+      <button (click)="login()">Connexion</button>
+      <!-- <button (click)="getDadJoke()">message</button> -->
+    </div>
+  }
+    @for (item of messages; track $index) { 
+      <div @fadeIn class="p-4 bg-slate-200 rounded m-4" [ngClass]="{
+        'bg-sky-500' : item.username === username,
+        'bg-slate-300' : item.username !== username
+      }">
+        <p class="font-bold">{{ item.username }}</p>
+        <p class="text-xs">{{ item.dateTime | date: "dd/MM/YYYY à HH:mm:ss" }}</p>
+        <p> {{ 23 | currency : "EUR" }} </p>
+        <p [innerHTML]="item.content | parseLink"></p>
+      </div>
+     }
