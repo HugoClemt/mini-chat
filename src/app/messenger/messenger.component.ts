@@ -70,8 +70,6 @@ export class MessengerComponent {
     }) */
   }
 
-  interval = interval(2000);
-
   getDadJoke() {
     /* this.http.get<DadJoke>('https://icanhazdadjoke.com/', {headers : {Accept : 'application/json'}})
       .subscribe(dadMessage => {
