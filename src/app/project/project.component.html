@@ -1,1 +1,48 @@
-<p>project works!</p>
+<div class="w-full bg-slate-200 p-4">
+    <h1>Projet</h1>
+    <div class="pt-3 flex gap-2 w-full">
+        <input class="w-[95%]" type="text" placeholder="Rechercher" />
+        <button>Search</button>
+    </div>
+</div>
+<div class="flex flex-wrap mt-4 gap-2 w-full justify-center">
+    <div class="w-[32%] h-96 bg-gray-200 rounded border border-slate-400 relative">
+        <h2 class="pl-2">
+            Todo
+        </h2>
+        <button class="bg-transparent flex flex-wrap absolute bottom-0" (click)="addItemTodo()"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    stroke-width="2" 
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>Add item
+        </button>
+    </div>
+    <div class="w-[32%] h-96 bg-gray-200 rounded border border-slate-400 relative">
+        <h2 class="pl-2">In Progress</h2>
+        <div class="bg-white m-2 p-1 rounded border border-slate-400">
+            <h3>Item 1</h3>
+            <p>Description Item</p>
+        </div>
+        <button class="bg-transparent flex flex-wrap absolute bottom-0" (click)="addItemProgress()"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    stroke-width="2" 
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>Add item
+        </button>
+    </div>
+    <div class="w-[32%] h-96 bg-gray-200 rounded border border-slate-400 relative">
+        <h2 class="pl-2">Done</h2>
+        <button class="bg-transparent flex flex-wrap absolute bottom-0" (click)="addItemDone()"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    stroke-width="2" 
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>Add item
+        </button>
+    </div>
+</div>

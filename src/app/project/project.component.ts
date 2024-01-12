@@ -9,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class ProjectComponent {
 
+
+  addItemDone() {
+    console.log("add item");
+
+  }
+
+  addItemProgress() {
+    console.log("add item");
+  }
+
+  addItemTodo() {
+    console.log("add item");
+  }
 }
