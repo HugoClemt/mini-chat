@@ -1,4 +1,4 @@
-<div class="w-full bg-slate-200 p-4">
+<!-- <div class="w-full bg-slate-200 p-4">
     <h1>Projet</h1>
     <div class="pt-3 flex gap-2 w-full">
         <input class="w-[95%]" type="text" placeholder="Rechercher" />
@@ -46,3 +46,33 @@
         </button>
     </div>
 </div>
+ -->
+
+
+ <section class="bg-slate-100 p-4">
+    <form [formGroup]="projetForm" class="flex flex-col gap-2 w-full maw-w-xl">
+        <label>Titre</label>
+        <input class="w-full h-10" [formControl]="projetForm.controls.title"/>
+        <label>Identifiant</label>
+        <input class="w-full h-10" [formControl]="projetForm.controls.id"/>
+        <label>Status</label>
+        @for(control of projetForm.controls.status.controls; track $index) {
+            <input [formControl]="control"/>
+        }
+        <button (click)="addStatus()">Ajouter un statut</button>
+        <label>Task</label>
+        @for(form of projetForm.controls.tasks.controls; track $index) {
+            <input type="text" [formControl]="form.controls.title"/>
+            <input type="text" [formControl]="form.controls.description"/>
+            <select>
+                @for( option of projetForm.controls.status.value; track $index) {
+                    <option [value]="option">{{ option }}</option>
+                }
+            </select>
+            <input type="date" [formControl]="form.controls.start"/>
+            <input type="date" [formControl]="form.controls.end"/>
+        }
+        <button (click)="addTask()">Ajouter une tâche</button>
+    </form>
+    <!-- <button class="w-full mt-5" (click)="update()">Enregistrer</button> -->
+ </section>
